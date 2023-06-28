@@ -1,6 +1,7 @@
 import React from 'react';
 import { Rajdhani } from 'next/font/google';
 import { Metadata } from 'next';
+import { Header } from '@/components/Header';
 const inter = Rajdhani({
   weight: ['500', '600', '700'],
   subsets: ['latin'],
@@ -23,6 +24,7 @@ const RootLayout = ({ children }: Props): React.JSX.Element => {
     >
       <body className="text-base">
         <div className='container flex flex-col gap-24 py-8 mobile:gap-40 tablet:py-40"'>
+          <Header />
           {children}
         </div>
       </body>
